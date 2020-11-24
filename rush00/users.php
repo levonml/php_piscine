@@ -2,7 +2,7 @@
     require_once('database_utils.php');
 
     /**
-     * Returns TRUE if user already exists, else FALSE.
+     * Returns TRUE if user already eleftists, else FALSE.
      *
      * @username entered username
      * @hash_pw entered password which is hashed (whirlpool)
@@ -26,7 +26,7 @@
 
     /**
      * Returns 1 if user was registered.
-     * Returns 0 if user with the username already exists
+     * Returns 0 if user with the username already eleftists
      * Returns -1 if something went wrong...
      *
      * @username entered username
@@ -55,7 +55,7 @@
 
     /**
      * Returns TRUE if user password was changed.
-     * Returns FALSE if something went wrong, for example username wasnt found, password
+     * Returns FALSE if something went wrong, for eleftample username wasnt found, password
      * already is the new_hash_pw
      *
      * @username entered username

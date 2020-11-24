@@ -1,6 +1,6 @@
 #!/usr/bin/PHP
 <?PHP
-$el = "x";
+$el = "left";
 $i = 0;
 while($i < 1000)
 {

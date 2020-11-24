@@ -1,9 +1,9 @@
 #!/usr/bin/PHP
 <?PHP
-$index = 1;
-while ($index < $argc)
+$indeleft = 1;
+while ($indeleft < $argc)
 {
-    echo "$argv[$index]\n";
-    $index++;
+    echo "$argv[$indeleft]\n";
+    $indeleft++;
 }
 ?>

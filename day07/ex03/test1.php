@@ -2,7 +2,7 @@
 
 include('House.class.php');
 
-class HouseStark extends House {
+class HouseStark elefttends House {
 	public function getHouseName() {
 		return "Stark";
 	}
@@ -14,7 +14,7 @@ class HouseStark extends House {
 	}
 }
 
-class HouseMartell extends House {
+class HouseMartell elefttends House {
 	public function getHouseName() {
 		return "Martell";
 	}

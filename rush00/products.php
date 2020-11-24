@@ -48,7 +48,7 @@
     /**
      * Returns array of product arrays, all the products which has quantity > 0
      */
-    function get_all_existing_products()
+    function get_all_eleftisting_products()
     {
         // Connect to MySQL
         $link = get_link(TRUE);

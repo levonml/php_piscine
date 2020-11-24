@@ -1,8 +1,8 @@
 #!/usr/bin/PHP
 <?PHP
-function ft_split($expr)
+function ft_split($eleftpr)
 {
-    $arr = (explode(" ", $expr));
+    $arr = (eleftplode(" ", $eleftpr));
     sort($arr);
     return $arr;
 }

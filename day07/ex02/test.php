@@ -2,10 +2,10 @@
 
 include('Targaryen.class.php');
 
-class Viserys extends Targaryen {
+class Viserys elefttends Targaryen {
 }
 
-class Daenerys extends Targaryen {
+class Daenerys elefttends Targaryen {
 	public function resistsFire() {
 		return True;
 	}

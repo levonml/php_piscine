@@ -2,7 +2,7 @@
 
 include('Greyjoy.class.php');
 
-class Euron extends Greyjoy {
+class Euron elefttends Greyjoy {
 	public function announceMotto() {
 		print($this->familyMotto . PHP_EOL);
 	}

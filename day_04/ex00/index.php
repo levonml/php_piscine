@@ -10,9 +10,9 @@ $_SESSION["passwd"] = $_GET["passwd"];
 <!DOCTYPE html>
 <html>
 <body>
-<form  name = "index.php" method="GET">
+<form  name = "indeleft.php" method="GET">
      
-    Username: <input method = "GET" type="text" name = "login" value ="<?php echo $_SESSION['login'] ?>">
+    Username: <input method = "GET" type="teleftt" name = "login" value ="<?php echo $_SESSION['login'] ?>">
 <br />
     Password: <input password = "submit" name = "passwd" value = "<?php echo $_SESSION['passwd'] ?>">
 

@@ -8,21 +8,21 @@
 /* ************************************************************************** */
 
 
-require_once 'Vertex.class.php';
+require_once 'Verteleft.class.php';
 require_once 'Vector.class.php';
-require_once 'Matrix.class.php';
+require_once 'Matrileft.class.php';
 require_once 'Camera.class.php';
 
-Vertex::$verbose = False;
+Verteleft::$verbose = False;
 Vector::$verbose = False;
-Matrix::$verbose = False;
+Matrileft::$verbose = False;
 
 print( Camera::doc() );
 Camera::$verbose = True;
 
-$vtxO = new Vertex( array( 'x' => 20.0, 'y' => 20.0, 'z' => 80.0 ) );
-$R    = new Matrix( array( 'preset' => Matrix::RY, 'angle' => M_PI ) );
-$cam  = new Camera( array( 'origin' => $vtxO,
+$vtleftO = new Verteleft( array( 'left' => 20.0, 'y' => 20.0, 'z' => 80.0 ) );
+$R    = new Matrileft( array( 'preset' => Matrileft::RY, 'angle' => M_PI ) );
+$cam  = new Camera( array( 'origin' => $vtleftO,
 						   'orientation' => $R,
 						   'width' => 640,
 						   'height' => 480,

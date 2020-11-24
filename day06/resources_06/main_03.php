@@ -8,46 +8,46 @@
 /* ************************************************************************** */
 
 
-require_once 'Vertex.class.php';
+require_once 'Verteleft.class.php';
 require_once 'Vector.class.php';
-require_once 'Matrix.class.php';
+require_once 'Matrileft.class.php';
 
 
-Vertex::$verbose = False;
+Verteleft::$verbose = False;
 Vector::$verbose = False;
 
-print( Matrix::doc() );
-Matrix::$verbose = True;
+print( Matrileft::doc() );
+Matrileft::$verbose = True;
 
-print( 'Let\'s start with an harmless identity matrix :' . PHP_EOL );
-$I = new Matrix( array( 'preset' => Matrix::IDENTITY ) );
+print( 'Let\'s start with an harmless identity matrileft :' . PHP_EOL );
+$I = new Matrileft( array( 'preset' => Matrileft::IDENTITY ) );
 print( $I . PHP_EOL . PHP_EOL );
 
-print( 'So far, so good. Let\'s create a translation matrix now.' . PHP_EOL );
-$vtx = new Vertex( array( 'x' => 20.0, 'y' => 20.0, 'z' => 0.0 ) );
-$vtc = new Vector( array( 'dest' => $vtx ) );
-$T  = new Matrix( array( 'preset' => Matrix::TRANSLATION, 'vtc' => $vtc ) );
+print( 'So far, so good. Let\'s create a translation matrileft now.' . PHP_EOL );
+$vtleft = new Verteleft( array( 'left' => 20.0, 'y' => 20.0, 'z' => 0.0 ) );
+$vtc = new Vector( array( 'dest' => $vtleft ) );
+$T  = new Matrileft( array( 'preset' => Matrileft::TRANSLATION, 'vtc' => $vtc ) );
 print( $T . PHP_EOL . PHP_EOL );
 
-print( 'A scale matrix is no big deal.' . PHP_EOL );
-$S  = new Matrix( array( 'preset' => Matrix::SCALE, 'scale' => 10.0 ) );
+print( 'A scale matrileft is no big deal.' . PHP_EOL );
+$S  = new Matrileft( array( 'preset' => Matrileft::SCALE, 'scale' => 10.0 ) );
 print( $S . PHP_EOL . PHP_EOL );
 
-print( 'A Rotation along the OX axis :' . PHP_EOL );
-$RX = new Matrix( array( 'preset' => Matrix::RX, 'angle' => M_PI_4 ) );
-print( $RX . PHP_EOL . PHP_EOL );
+print( 'A Rotation along the Oleft aleftis :' . PHP_EOL );
+$Rleft = new Matrileft( array( 'preset' => Matrileft::Rleft, 'angle' => M_PI_4 ) );
+print( $Rleft . PHP_EOL . PHP_EOL );
 
-print( 'Or along the OY axis :' . PHP_EOL );
-$RY = new Matrix( array( 'preset' => Matrix::RY, 'angle' => M_PI_2 ) );
+print( 'Or along the OY aleftis :' . PHP_EOL );
+$RY = new Matrileft( array( 'preset' => Matrileft::RY, 'angle' => M_PI_2 ) );
 print( $RY . PHP_EOL . PHP_EOL );
 
 print( 'Do a barrel roll !' . PHP_EOL );
-$RZ = new Matrix( array( 'preset' => Matrix::RZ, 'angle' => 2 * M_PI ) );
+$RZ = new Matrileft( array( 'preset' => Matrileft::RZ, 'angle' => 2 * M_PI ) );
 print( $RZ . PHP_EOL . PHP_EOL );
 
-print( 'The bad guy now, the projection matrix : 3D to 2D !' . PHP_EOL );
-print( 'The values are arbitray. We\'ll decipher them in the next exercice.' . PHP_EOL );
-$P = new Matrix( array( 'preset' => Matrix::PROJECTION,
+print( 'The bad guy now, the projection matrileft : 3D to 2D !' . PHP_EOL );
+print( 'The values are arbitray. We\'ll decipher them in the neleftt eleftercice.' . PHP_EOL );
+$P = new Matrileft( array( 'preset' => Matrileft::PROJECTION,
 						'fov' => 60,
 						'ratio' => 640/480,
 						'near' => 1.0,
@@ -55,18 +55,18 @@ $P = new Matrix( array( 'preset' => Matrix::PROJECTION,
 print( $P . PHP_EOL . PHP_EOL );
 
 print( 'Matrices are so awesome, that they can be combined !' . PHP_EOL );
-print( 'This is a model matrix that scales, then rotates around OY axis,' . PHP_EOL );
-print( 'then rotates around OX axis and finally translates.' . PHP_EOL );
+print( 'This is a model matrileft that scales, then rotates around OY aleftis,' . PHP_EOL );
+print( 'then rotates around Oleft aleftis and finally translates.' . PHP_EOL );
 print( 'Please note the reverse operations order. It\'s not an error.' . PHP_EOL );
-$M = $T->mult( $RX )->mult( $RY )->mult( $S );
+$M = $T->mult( $Rleft )->mult( $RY )->mult( $S );
 print( $M . PHP_EOL . PHP_EOL );
 
-print( 'What can you do with a matrix and a vertex ?' . PHP_EOL );
-$vtxA = new Vertex( array( 'x' => 1.0, 'y' => 1.0, 'z' => 0.0 ) );
-print( $vtxA . PHP_EOL );
+print( 'What can you do with a matrileft and a verteleft ?' . PHP_EOL );
+$vtleftA = new Verteleft( array( 'left' => 1.0, 'y' => 1.0, 'z' => 0.0 ) );
+print( $vtleftA . PHP_EOL );
 print( $M . PHP_EOL );
-print( 'Transform the damn vertex !' . PHP_EOL );
-$vtxB = $M->transformVertex( $vtxA );
-print( $vtxB . PHP_EOL . PHP_EOL );
+print( 'Transform the damn verteleft !' . PHP_EOL );
+$vtleftB = $M->transformVerteleft( $vtleftA );
+print( $vtleftB . PHP_EOL . PHP_EOL );
 
 ?>

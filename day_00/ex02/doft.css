@@ -1,32 +1,32 @@
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    -moz-boleft-sizing: border-boleft;
+    -webkit-boleft-sizing: border-boleft;
+    boleft-sizing: border-boleft;
   }
 * {
-    padding: 0px;
-    margin: 0px
+    padding: 0pleft;
+    margin: 0pleft
   }
   body{background-color: #505050}
   #main_cont{
       width: 100%;
-      height: 1500px;
+      height: 1500pleft;
       position: relative;
   }
-.clearfix::after{
+.clearfileft::after{
     content: "";
     clear: both;
     display: table;
 }
 #cont-top{
-    z-index: 5;
+    z-indeleft: 5;
     position: relative;
     background-color: #909090;
-    height:107px;
-    width: 1085px;
-    margin: 40px auto 0;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px black;
+    height:107pleft;
+    width: 1085pleft;
+    margin: 40pleft auto 0;
+    border-radius: 10pleft;
+    boleft-shadow: 10pleft 10pleft 10pleft black;
 }
 
 #loup, #close, #reload {
@@ -35,118 +35,118 @@
 }
 #day42 img{
     float: left;
-    border-radius: 13px;
-    width: 345px;
+    border-radius: 13pleft;
+    width: 345pleft;
     height: auto;
-    margin-top: 9px
+    margin-top: 9pleft
 }
 
 #cont-mid{
     position: relative;
-    margin: 20px auto 0;
-    width: 1085px;
-    height:500px;
+    margin: 20pleft auto 0;
+    width: 1085pleft;
+    height:500pleft;
 }
-#close{position: absolute; bottom: 7px; right: 10px; z-index: 1}
-#close, #close img{width: 15px; height: auto}
-#reload, #reload img{width: 15px; height: auto}
-#loup, #loup img{width: 190px; height: auto}
+#close{position: absolute; bottom: 7pleft; right: 10pleft; z-indeleft: 1}
+#close, #close img{width: 15pleft; height: auto}
+#reload, #reload img{width: 15pleft; height: auto}
+#loup, #loup img{width: 190pleft; height: auto}
 
-#reload{position: absolute; top: 10px; right: 10px; z-index: 1}
-#loup {position: absolute; top: 12px; right:27px;}
+#reload{position: absolute; top: 10pleft; right: 10pleft; z-indeleft: 1}
+#loup {position: absolute; top: 12pleft; right:27pleft;}
 
 
 #left, #mid, #right{
      float: left; 
      background-color: #909090;
-     box-shadow: 10px 10px 10px black; 
+     boleft-shadow: 10pleft 10pleft 10pleft black; 
     }
 
 
 #right img{
-    width: 55px;
+    width: 55pleft;
     height: auto;
 }
 #left img{
-    width: 56px;
+    width: 56pleft;
     height: auto;
-    z-index: 1
+    z-indeleft: 1
 }
 #right{
     position: absolute;
-    right:23px;
-    border-radius: 10px;
-    z-index: 1
+    right:23pleft;
+    border-radius: 10pleft;
+    z-indeleft: 1
     }
 #left{position: absolute;
-     left:22px;
-     border-radius: 10px;
-     z-index: 2
+     left:22pleft;
+     border-radius: 10pleft;
+     z-indeleft: 2
     }
 #mid{
-    width: 780px;
+    width: 780pleft;
     height: auto;
     position: absolute;
-    left:152px;
-    padding: 7px;
-    border-radius: 10px;
+    left:152pleft;
+    padding: 7pleft;
+    border-radius: 10pleft;
 }
 .left, .right{
     position: relative;
-    left : 28px;
-    top: 10px; }
+    left : 28pleft;
+    top: 10pleft; }
 
 /*#right #brick{
     width: 40%;
     height: auto;
-    background-repeat: repeat-x;
+    background-repeat: repeat-left;
 }*/
 .brick {
-    width: 92px;
-    height: 50px;
+    width: 92pleft;
+    height: 50pleft;
     background-image: url("resources/brick.jpg");
-    background-size: 22px;
+    background-size: 22pleft;
     position: relative;
-    left:8px;
-    top: 15px
+    left:8pleft;
+    top: 15pleft
 }
 #eye{
-    border: 3px solid red;
-    border-radius: 3px
+    border: 3pleft solid red;
+    border-radius: 3pleft
 }
-#left, #right{width: 108px; height: 325px }
+#left, #right{width: 108pleft; height: 325pleft }
 .repondre{
-    border-radius: 8px;
-    box-shadow: 10px 10px 10px black;
-    padding: 5px 10px 40px; 
+    border-radius: 8pleft;
+    boleft-shadow: 10pleft 10pleft 10pleft black;
+    padding: 5pleft 10pleft 40pleft; 
     background-color: #88FF89;
-    width:380px;
-    height: 130px;
+    width:380pleft;
+    height: 130pleft;
     position:absolute;
     left: -27%;
     bottom: -16%;
-    font-size:12px;
+    font-size:12pleft;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #bar{
-    width: 270px;
-    height:18px;
-    border: 2px solid #EFEBEA;
-    border-top: 2px solid #9B9D9C;
-    border-left: 2px solid #9B9D9C 
+    width: 270pleft;
+    height:18pleft;
+    border: 2pleft solid #EFEBEA;
+    border-top: 2pleft solid #9B9D9C;
+    border-left: 2pleft solid #9B9D9C 
 }
 #button{
     color: black;
-    border: 1px solid #9B9D9C;
-    margin-left: 2px;
-    font-size: 10px;
-    padding: 2px 5px;
+    border: 1pleft solid #9B9D9C;
+    margin-left: 2pleft;
+    font-size: 10pleft;
+    padding: 2pleft 5pleft;
  
 
 }
 .repondre p .span1 {
-    font-size: 28px;
+    font-size: 28pleft;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: lighter;
 }
-.repondre p #span2 {text-shadow: 3px 6px 3px red ;}
+.repondre p #span2 {teleftt-shadow: 3pleft 6pleft 3pleft red ;}

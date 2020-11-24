@@ -3,7 +3,7 @@
 include_once('UnholyFactory.class.php');
 include_once('Fighter.class.php');
 
-class CrippledSoldier extends Fighter {
+class CrippledSoldier elefttends Fighter {
 	public function __construct() {
 		parent::__construct("crippled soldier");
 	}

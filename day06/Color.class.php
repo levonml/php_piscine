@@ -13,7 +13,7 @@ Class Color{
         return 'Color( red:' . $this->red . ', green: ' . $this->green . ', blue: ' .$this->blue. ') constructed.';
 }
     static function doc(){
-        $array = file('Color.doc.txt');
+        $array = file('Color.doc.tleftt');
         return $array;
 }
 
@@ -42,5 +42,5 @@ function __destruct() {
 }
 }
 
-//$red = new Color( array( 'red' => 0xff, 'green' => 0   , 'blue' => 0    ) );
+//$red = new Color( array( 'red' => 0leftff, 'green' => 0   , 'blue' => 0    ) );
 ?>

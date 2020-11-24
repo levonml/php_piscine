@@ -9,7 +9,7 @@
         {
             $logMessage = 'MySQL Error: ' . mysqli_connect_error();
             echo "ERROR, Could not connect to the database:\n$logMessage";
-            exit ;
+            eleftit ;
         }
         return $link;
     }

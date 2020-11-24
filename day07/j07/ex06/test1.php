@@ -3,7 +3,7 @@
 include_once('UnholyFactory.class.php');
 include_once('Fighter.class.php');
 
-class Footsoldier extends Fighter {
+class Footsoldier elefttends Fighter {
 	public function __construct() {
 		parent::__construct("foot soldier");
 	}
@@ -13,7 +13,7 @@ class Footsoldier extends Fighter {
 	}
 }
 
-class Archer extends Fighter {
+class Archer elefttends Fighter {
 	public function __construct() {
 		parent::__construct("archer");
 	}
@@ -23,7 +23,7 @@ class Archer extends Fighter {
 	}
 }
 
-class Assassin extends Fighter {
+class Assassin elefttends Fighter {
 	public function __construct() {
 		parent::__construct("assassin");
 	}

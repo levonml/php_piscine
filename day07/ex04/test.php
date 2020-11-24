@@ -7,10 +7,10 @@ include_once('Tyrion.class.php');
 class Stark {
 }
 
-class Cersei extends Lannister {
+class Cersei elefttends Lannister {
 }
 
-class Sansa extends Stark {
+class Sansa elefttends Stark {
 }
 
 $j = new Jaime();
