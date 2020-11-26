@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <title>baloon</title>
+        <style>
+            #baloon{
+                margin:400px auto;
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+    <script>
+        var new_div;
+        new_div = document.createElement('div');
+        new_div.setAttribute('id', 'baloon');
+        document.body.appendChild(new_div);
+        new_div.addEventListener('mouseleave', deflate);
+
+        var add;
+        var click;
+        click = 1; 
+        add = 200;
+        var change = document.getElementById('baloon')
+        change.onclick = function(){
+            add +=10;
+        if (add > 420)
+            add = 200;
+        change.style.width =  add+'px';
+        change.style.height = add+'px';   
+        if(click >= 4) 
+            click = 1;
+        if(click == 1)
+            change.style.backgroundColor = 'green';
+        if(click == 2)
+            change.style.backgroundColor = 'blue';
+        if(click == 3)
+            change.style.backgroundColor = 'red';        
+        click++;
+        }
+        function deflate(){
+            if (add > 200)
+        {     
+        add -=5;     
+        new_div.style.width =  add+'px';
+        new_div.style.height = add+'px';   
+        }
+        if(click >=4) 
+        click = 1;
+        if(click == 1)
+            new_div.style.backgroundColor = 'blue';
+        if(click == 2)
+            new_div.style.backgroundColor = 'green';
+        if(click== 3)
+            new_div.style.backgroundColor = 'red';        
+            click++;
+        
+        }
+    </script>
+
+    </body>
+</html>

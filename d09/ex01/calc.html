@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+<script>
+  var right = document.createElement("INPUT");
+  right.setAttribute("type", "text");
+  right.setAttribute("id", "right");
+  right.setAttribute("value", "");
+  document.body.appendChild(right);
+
+  var sel = document.createElement("SELECT");
+  sel.setAttribute("id", "select");
+  document.body.appendChild(sel);
+  var op4 = document.createElement("option");
+  op4.setAttribute("value", "+");
+  op4.innerHTML = '+';
+  var op = document.createElement("option");
+  op.setAttribute("value", "-");
+  op.innerHTML = '-';
+  var op1 = document.createElement("option");
+  op1.setAttribute("value", "/");
+  op1.innerHTML = '/';
+  var op2 = document.createElement("option");
+  op2.setAttribute("value", "*");
+  op2.innerHTML = '*';
+  var op3 = document.createElement("option");
+  op3.setAttribute("value", "%");
+  op3.innerHTML = '%';
+  document.getElementById("select").appendChild(op4);
+  document.getElementById("select").appendChild(op);
+  document.getElementById("select").appendChild(op1);
+  document.getElementById("select").appendChild(op2);
+  document.getElementById("select").appendChild(op3);
+  
+  var left = document.createElement("INPUT");
+  left.setAttribute("type", "text");
+  document.body.appendChild(left);
+  right.setAttribute("id", "left");
+  right.setAttribute("value", "");
+
+  var sub = document.createElement("input");
+  sub.setAttribute("type", "submit");
+  sub.setAttribute("id", 'submit');
+  sub.setAttribute("value", "Tri me!");
+  document.body.appendChild(sub);
+  sub.addEventListener('click', res);
+var r = documente.getElementById('right').value;
+var l = documente.getElementById('left').value;
+var act = document.select.options[document.select.selectedIndex].value;
+function res(){
+    if(act = "+")
+    alert(r + l);
+    if(act = "-")
+    alert(r - l);
+    if(act = "*")
+    alert(r * l);
+    if(act = "/")
+    alert(r / l);
+    if(act = "%")
+    alert(r % l);
+}
+</script>
+
+</body>
+
+</html>

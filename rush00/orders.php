@@ -6,7 +6,7 @@
     {
         echo $entry['time']."\n";
         foreach ($entry['all_items']['products'] as $items)
-            echo $items['name']." - ".$items['price']." left ".$items['quantity']." --> ".$items['sum']."\n";
+            echo $items['name']." - ".$items['price']." x ".$items['quantity']." --> ".$items['sum']."\n";
         echo $entry['all_items']['full_price']."\n";
     }
     */
@@ -38,12 +38,12 @@
 
     /**
      * Used by the function mysqli_free_result();
-     * Reduce products clicks and if all good return TRUE else FALSE
+     * Reduce products counts and if all good return TRUE else FALSE
      *
      * @products which are needed to be added to orders as purchases.
      *           Array of arrays where each sub array has to have the following
      *           keys with values: name (product name), price (Number, product price),
-     *           quantity (Number, how many of the same product) and sum (Number, price left quantity)
+     *           quantity (Number, how many of the same product) and sum (Number, price x quantity)
      * @link     database link
      */
     function reduce_products($products, $link)
@@ -55,22 +55,22 @@
             $name = $item['name'];
             $query = "SELECT * FROM Product WHERE name LIKE '$name'";
             $result = mysqli_query($link, $query);
-            $row_click = mysqli_num_rows($result);
-            if ($row_click !== 0)
+            $row_count = mysqli_num_rows($result);
+            if ($row_count !== 0)
                 $names[] = $name;
             mysqli_free_result($result);
             $i++;
         }
-        if (click($names) !== $i)
+        if (count($names) !== $i)
             return FALSE;
         $ret = TRUE;
         foreach ($products as $item)
         {
-            $click = $item['quantity'];
+            $count = $item['quantity'];
             $name = $item['name'];
             $query = "
             UPDATE Product
-            SET quantity = quantity - $click
+            SET quantity = quantity - $count
             WHERE name LIKE '$name'";
             $result = mysqli_query($link, $query);
             if ($result != 1)
@@ -84,15 +84,15 @@
         return $ret;
     }
     /**
-     * Reduce products clicks and add order and return 1 if the reducing and adding was successful.
-     * Return 0 if reducing didnt succeed (products dont eleftist) or something else and dont add order either
+     * Reduce products counts and add order and return 1 if the reducing and adding was successful.
+     * Return 0 if reducing didnt succeed (products dont exist) or something else and dont add order either
      * Return -1 if the adding new order failed.
      *
      * @username username of the user whose orders are wanted
      * @products which are needed to be added to orders as purchases.
      *           Array of arrays where each sub array has to have the following
      *           keys with values: name (product name), price (Number, product price),
-     *           quantity (Number, how many of the same product) and sum (Number, price left quantity)
+     *           quantity (Number, how many of the same product) and sum (Number, price x quantity)
      */
     function add_order_for_user($username, $products)
     {
